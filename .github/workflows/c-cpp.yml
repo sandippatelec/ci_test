@@ -21,7 +21,7 @@ jobs:
                 
     - name: Configure Test
       shell: bash
-      working-directory: ${{github.workspace}}\ci_test\analytics\C\udataDatabase
+      working-directory: ${{github.workspace}}/ci_test/analytics/C/udataDatabase
       run: echo pwd!
       
     - name: make
