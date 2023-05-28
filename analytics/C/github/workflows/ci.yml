@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: make
+
+    - name: Run tests
+      run: make test
