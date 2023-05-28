@@ -24,6 +24,7 @@ jobs:
 #       working-directory: ${{github.workspace}}/analytics/C/udataDatabase
       working-directory: ${{github.workspace}}/analytics/C/
       run: |
+        chmod +x build.sh
         ./build.sh udataDatabase 
         make
         echo $pwd
