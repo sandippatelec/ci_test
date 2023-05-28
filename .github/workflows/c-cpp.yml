@@ -21,8 +21,10 @@ jobs:
       
     - name: make
       shell: bash
-      working-directory: ${{github.workspace}}/analytics/C/udataDatabase
+#       working-directory: ${{github.workspace}}/analytics/C/udataDatabase
+      working-directory: ${{github.workspace}}/analytics/C/
       run: |
+        ./build.sh udataDatabase 
         make
         echo $pwd
       
