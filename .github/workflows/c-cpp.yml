@@ -27,6 +27,8 @@ jobs:
         echo $pwd
       
     - name: make clean
+      shell: bash
+      working-directory: ${{github.workspace}}/analytics/C/udataDatabase
       run: make clean
       
 #     - name: make check
