@@ -18,11 +18,9 @@ jobs:
       run: |
         sudo apt-get update -qq
         sudo apt-get install build-essential
-        run: echo package install!
-        
+                
     - name: Configure Test
       shell: bash
-      # Change the directory to be 
       working-directory: ${{github.workspace}}\ci_test\analytics\C\udataDatabase
       run: echo pwd!
       
