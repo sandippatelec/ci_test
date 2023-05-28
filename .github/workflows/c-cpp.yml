@@ -19,13 +19,14 @@ jobs:
         sudo apt-get update -qq
         sudo apt-get install build-essential
                 
-    - name: Configure Test
-      shell: bash
-      working-directory: ${{github.workspace}}/analytics/C/udataDatabase
-      run: echo pwd!
+
       
     - name: make
-      run: make
+      shell: bash
+      working-directory: ${{github.workspace}}/analytics/C/udataDatabase
+      run: |
+        make
+        echo $pwd
       
     - name: make check
       run: make check
